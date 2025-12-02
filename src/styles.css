@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Elementos padrão ===== */
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+
+}
+
+/* ===== Imagens ===== */
+img {
+  width: 80px;
+  height: auto;
+}
+
+
+/* ===== Botões ===== */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* ===== Inputs ===== */
+/* NÃO resetamos tudo para não quebrar Angular Material */
+input, textarea, select {
+  outline: none;
+  font-family: inherit;
+}
+
+/* ===== Utilidades ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

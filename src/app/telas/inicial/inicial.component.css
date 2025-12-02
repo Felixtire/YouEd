@@ -1,0 +1,38 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  padding: 20px;
+  background-color: #ffffff;
+}
+mat-toolbar{
+  background-color: #050000;
+}
+mat-card-title{
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  padding-bottom: 30px;
+
+}
+mat-form-field{
+  width: 350px;
+  padding-bottom: 20px;
+}
+mat-label{
+  font-size: 16px;
+}
+button{
+  width: 350px;
+  background-color: #000000;
+  color: azure;
+}
