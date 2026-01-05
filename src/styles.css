@@ -22,7 +22,6 @@ img {
   height: auto;
 }
 
-
 /* ===== Botões ===== */
 button {
   cursor: pointer;
@@ -32,30 +31,37 @@ button {
 }
 
 /* ===== Inputs ===== */
-/* NÃO resetamos tudo para não quebrar Angular Material */
 input, textarea, select {
   outline: none;
   font-family: inherit;
 }
 
-/* ===== Utilidades ===== */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px;
+/* ===== Container de conteúdo (animado) ===== */
+.form {
+  animation: fade 0.5s ease;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
+/* ===== Keyframes ===== */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button, .mat-mdc-button, .mat-raised-button {
+  transition: transform 0.6s ease;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button:hover,
+.mat-mdc-button:hover,
+.mat-raised-button:hover {
+  transform: scale(0.95);
 }
+
 
 
 
