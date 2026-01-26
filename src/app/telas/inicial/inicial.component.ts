@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {BackServiceService, Usuario, UsuarioLogado} from '../service/back-service.service';
+import {BackServiceService, Usuario} from '../service/back-service.service';
 import {Router} from '@angular/router';
 import {AuthServiceService} from '../service/auth-service.service';
+import {UsuarioLogadoModel} from '../../models/UsuarioLogado.model';
 
 @Component({
   selector: 'app-inicial',
@@ -10,7 +11,7 @@ import {AuthServiceService} from '../service/auth-service.service';
 })
 export class InicialComponent implements OnInit {
 
-  user: UsuarioLogado = {
+  user: UsuarioLogadoModel = {
     email: '',
     senha: '',
   };
@@ -22,8 +23,8 @@ export class InicialComponent implements OnInit {
         {
          next: (res) => {
            const tipo = res.tipo;
+           console.log(res.token);
            this.auth.salvarToken(res.token);
-           console.log('logado', res);
            this.user = {
              email: '',
              senha: '',

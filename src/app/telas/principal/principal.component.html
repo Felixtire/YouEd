@@ -3,14 +3,27 @@
 </mat-toolbar>
 
 <div class="container">
-  <mat-card class="video-card mat-elevation-z4">
+
+  <mat-card class="video-card mat-elevation-z4" >
     <div class="video-wrapper">
-      <video controls preload="metadata">
-        <source
-          src="assets/uploads/b2c4dfef-cf79-4e71-b021-829974ecae69.mp4"
-          type="video/mp4"
-        >
+      <video #videoPlayer width="640" height="360" controls preload="metadata">
       </video>
     </div>
   </mat-card>
+
+  <div class="btn-principal">
+    <button mat-raised-button color="accent">
+      <mat-icon>favorite</mat-icon>
+    </button>
+
+    <button mat-raised-button >
+      <mat-icon>arrow_upward</mat-icon>
+    </button>
+
+    <button mat-raised-button>
+      <mat-icon>arrow_downward</mat-icon>
+    </button>
+
+  </div>
+  
 </div>

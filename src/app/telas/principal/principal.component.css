@@ -29,3 +29,27 @@ mat-toolbar {
   height: 100%;
   object-fit: contain; /* não estica */
 }
+
+.btn-principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  margin-left: 380px;
+  margin-top: -350px;
+}
+.btn-principal button{
+  background-color: #050000;
+  color: cyan;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 90px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition:0.5s;
+}
+button:hover {
+  background-color: cyan;
+  color: #050000;
+  transform: scale(1.1);
+}
