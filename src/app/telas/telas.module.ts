@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -22,18 +23,19 @@ import {MatIconModule} from '@angular/material/icon';
     CadastroComponent,
     PrincipalComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormsModule,
 
-    MatToolbarModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatIconModule,
-  ]
+        MatToolbarModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatRadioModule,
+        MatIconModule,
+        MatSidenavModule,
+    ]
 })
 export class TelasModule { }

@@ -58,5 +58,8 @@ export class BackServiceService {
   cadastrarVideo(object: any): Observable<Video> {
     return this.http.post<Video>(`${this.apiUrl}video`, object);
   }
+  mostrarVideos(): Observable<string[]> {
+    return this.http.get<string[]>(`${this.apiUrl}video/uploads`);
+  }
 }
 

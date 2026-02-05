@@ -27,14 +27,30 @@ mat-card-title{
 }
 mat-form-field{
   width: 350px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 mat-label{
   font-size: 16px;
 }
 button{
+  margin-top: 10px;
   width: 350px;
   background-color: #000000;
   color: azure;
-  transform: ;
+  transform: scale(1) ;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+button:hover{
+  color: #136ae1;
+  transform: scale(1.1);
+}
+.red{
+  border: 1px solid red;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: red;
+ margin: 3px;
+  padding: 5px;
 }

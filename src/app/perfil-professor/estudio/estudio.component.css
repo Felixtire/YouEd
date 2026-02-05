@@ -1,69 +1,12 @@
 /* Toolbar */
 .toolbar {
-  background-color: #ffffff;
+  background-color: black;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   display: flex;
-  justify-content: center;
+
 }
 
 img{
-  width: 110px;
+  width: 120px;
   height: auto;
-}
-/* Form container */
-.form {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-/* Card */
-.card {
-  width: 100%;
-  max-width: 520px;
-  padding: 32px;
-  border-radius: 16px;
-}
-
-/* Title */
-mat-card-title {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 24px;
-  color: #2c2c2c;
-}
-
-/* Fields layout */
-.fields {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Material fields */
-mat-form-field {
-  width: 100%;
-}
-
-/* Button */
-.btn-cadastrar {
-  width: 100%;
-  margin-top: 28px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 8px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .card {
-    padding: 20px;
-    margin: 0 12px;
-  }
-
-  mat-card-title {
-    font-size: 20px;
-  }
 }

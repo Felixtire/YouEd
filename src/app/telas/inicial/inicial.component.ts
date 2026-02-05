@@ -9,15 +9,26 @@ import {UsuarioLogadoModel} from '../../models/UsuarioLogado.model';
   templateUrl: './inicial.component.html',
   styleUrls: ['./inicial.component.css']
 })
+
+
+
 export class InicialComponent implements OnInit {
+
+  mostrarErro = false;
 
   user: UsuarioLogadoModel = {
     email: '',
     senha: '',
   };
 
+
+
   constructor(private backService: BackServiceService, private router: Router, private auth: AuthServiceService) { }
   logar() {
+    if (this.user.email === '' || this.user.senha === ''){
+      this.mostrarErro = true;
+      return;
+    }
     this.backService.logar(this.user)
       .subscribe(
         {
@@ -29,19 +40,15 @@ export class InicialComponent implements OnInit {
              email: '',
              senha: '',
            };
-           if (tipo === 'PROFESSOR'){
-             this.router.navigate(['feedP']);
-           }else {
-             this.router.navigate(['feedA']);
-           }
+           this.router.navigate(['feed']);
          },
-         error: (err) => console.log(err)
+         error: (err) => {
+           this.mostrarErro = true;
+         }
         }
       );
 
   }
-
-
   ngOnInit(): void {
   }
 

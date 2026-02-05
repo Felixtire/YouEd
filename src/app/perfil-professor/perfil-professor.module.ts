@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EstudioComponent } from './estudio/estudio.component';
-import { PrincipalProfessorComponent } from './principal-professor/principal-professor.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {RouterModule} from '@angular/router';
@@ -18,7 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
-  declarations: [EstudioComponent, PrincipalProfessorComponent],
+  declarations: [EstudioComponent],
   imports: [
     CommonModule,
     MatCardModule,

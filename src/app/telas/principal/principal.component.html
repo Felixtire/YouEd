@@ -2,28 +2,62 @@
   <img src="assets/img/img.png" alt="Logo" class="logo">
 </mat-toolbar>
 
+<div class="nav">
+  <mat-sidenav-container>
+
+    <mat-sidenav mode="side" opened class="sidenav">
+
+      <div class="menu-item">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </div>
+
+      <div class="menu-item">
+        <mat-icon>account_circle</mat-icon>
+        <span>Perfil</span>
+      </div>
+
+      <div class="menu-item" routerLink="/studio">
+        <mat-icon >movie_edit</mat-icon>
+        <span>Studio</span>
+      </div>
+
+      <div class="menu-item">
+        <mat-icon>settings</mat-icon>
+        <span>Config</span>
+      </div>
+
+
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+
 <div class="container">
 
   <mat-card class="video-card mat-elevation-z4" >
     <div class="video-wrapper">
-      <video #videoPlayer width="640" height="360" controls preload="metadata">
+      <video  width="640" height="360" controls preload="metadata" *ngIf="videoUrl" [src]="videoUrl" controls autoplay >
       </video>
     </div>
   </mat-card>
 
   <div class="btn-principal">
-    <button mat-raised-button color="accent">
+    <button mat-fab color="accent" id="redi">
       <mat-icon>favorite</mat-icon>
     </button>
 
-    <button mat-raised-button >
+    <button mat-fab  (click)="proximoVideo()">
       <mat-icon>arrow_upward</mat-icon>
     </button>
 
-    <button mat-raised-button>
+    <button mat-fab (click)="voltarVideo()">
       <mat-icon>arrow_downward</mat-icon>
     </button>
 
   </div>
-  
+
+</div>
+    </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
