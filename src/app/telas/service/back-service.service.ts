@@ -21,7 +21,6 @@ export type UsuarioLogado= {
 };
 
 export type Video= {
-  email: string;
   descricao: string;
   categoria: string;
   titulo: string;
@@ -31,6 +30,7 @@ export type LoginResponse = {
   token: string;
   tipo: string;
 };
+
 
 
 @Injectable({
@@ -55,8 +55,15 @@ export class BackServiceService {
     return this.http.post<LoginResponse>(`${this.apiUrl}login`, usuario);
   }
 
-  cadastrarVideo(object: any): Observable<Video> {
-    return this.http.post<Video>(`${this.apiUrl}video`, object);
+  cadastrarVideo(video: Video, file: File): Observable<any> {
+    const formData = new FormData();
+
+    formData.append('file', file);
+    formData.append('video', new Blob(
+      [JSON.stringify(video)],
+      {type: 'application/json'}
+    ));
+    return this.http.post(`${this.apiUrl}video/upload`, formData);
   }
   mostrarVideos(): Observable<string[]> {
     return this.http.get<string[]>(`${this.apiUrl}video/uploads`);
