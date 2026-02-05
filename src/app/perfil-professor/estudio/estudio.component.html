@@ -6,3 +6,69 @@
     class="logo"
     routerLink="">
 </mat-toolbar>
+
+<mat-card class="main">
+
+  <mat-horizontal-stepper linear>
+    <mat-step>
+      <mat-card class="center-step">
+        <h1>Publique seu vídeo</h1>
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Título do vídeo
+          </mat-label>
+          <input matInput placeholder="Insira o título do vídeo" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Descrição do vídeo
+          </mat-label>
+          <textarea matInput placeholder="Insira a descrição do vídeo" ></textarea>
+        </mat-form-field>
+
+        <mat-label class="catagoria">Categoria</mat-label>
+
+        <div class="category">
+          <mat-checkbox  *ngFor="let categoria of categorias">{{categoria}}</mat-checkbox>
+        </div>
+
+        <button mat-button class="center-btn">Avançar</button>
+      </mat-card>
+    </mat-step>
+
+    <mat-step>
+
+
+    <div class="content">
+      <div class="icon-upload">
+        <mat-icon>
+          cloud_upload
+        </mat-icon>
+
+      </div>
+
+    <div>
+
+    </div>
+
+    <div class="upload-wrapper" aria-label="upload area">
+      <input type="file" id="file" accept="video/*" class="file-input">
+
+      <label for="file" class="btn-upload">
+        <mat-icon class="btn-icon">file_upload</mat-icon>
+        <span>Selecionar arquivo</span>
+      </label>
+
+      <p class="hint">ou arraste e solte aqui um vídeo (MP4, MOV)</p>
+
+      <div class="file-info" aria-live="polite"></div>
+    </div>
+
+
+    </div>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+
+</mat-card>
