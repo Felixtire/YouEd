@@ -10,7 +10,7 @@ mat-toolbar {
 
 }
 
-/* Card */
+
 .video-card {
   border-radius: 16px;
   padding: 12px;
@@ -55,18 +55,17 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Container geral */
+
 .nav {
   height: 100vh;
   width: 100%;
 }
 
-/* Garante altura total */
+
 mat-sidenav-container {
   height: 100%;
 }
 
-/* Menu lateral */
 .sidenav {
   width: 140px;
   background: black;
@@ -75,7 +74,7 @@ mat-sidenav-container {
   padding-top: 20px;
 }
 
-/* Itens do menu */
+
 .menu-item {
   display: flex;
   align-items: center;
@@ -88,25 +87,24 @@ mat-sidenav-container {
   transition: all 0.25s ease;
 }
 
-/* Hover */
+
 .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.12);
   transform: translateX(4px);
 }
 
-/* Ícones */
+
 .menu-item mat-icon {
   font-size: 22px;
   color: #90caf9;
 }
 
-/* Texto */
 .menu-item span {
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 
-/* Conteúdo principal */
+
 .content {
   padding: 5px;
   background-color: #f4f6f8;

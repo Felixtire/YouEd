@@ -29,11 +29,12 @@ export class InicialComponent implements OnInit {
       this.mostrarErro = true;
       return;
     }
+    console.log(this.user);
     this.backService.logar(this.user)
       .subscribe(
         {
          next: (res) => {
-           const tipo = res.tipo;
+           const tipo = res.token;
            console.log(res.token);
            this.auth.salvarToken(res.token);
            this.user = {

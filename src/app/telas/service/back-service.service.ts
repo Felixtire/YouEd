@@ -28,7 +28,6 @@ export type Video= {
 };
 export type LoginResponse = {
   token: string;
-  tipo: string;
 };
 
 
